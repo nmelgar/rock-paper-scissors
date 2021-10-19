@@ -24,6 +24,42 @@
 body {
   background: var(--dark);
   color: var(--green);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.main-content{
+  max-width: 1100px;
+  margin:0 auto;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.buttons {
+  margin-top: 40px;
+}
+
+.buttons p {
+  padding: 40px;
+}
+
+.buttons a {
+  color: var(--green);
+  text-decoration: none;
+  border: 2px solid var(--green);
+  padding: 20px;
+
+}
+
+.buttons a:hover {
+  color: red;
+  border: 2px solid red;
+
+
 }
 
 /*--------->General Styles<-----------*/
@@ -35,7 +71,12 @@ body {
 
 
 /*--------->Media Queries<-----------*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 612px) {
+
+  .buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
 
 /*--------->NOTES<-----------*/
