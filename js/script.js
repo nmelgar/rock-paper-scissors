@@ -3,7 +3,7 @@ var userInput = prompt("What you choose, Rock, Paper or Scissors?");
 //console.log(userInput.toUpperCase());
 
 //Computer
-computerOptions = ["ROCK", "PAPER", "SCISSORS"];
+const computerOptions = ["ROCK", "PAPER", "SCISSORS"];
 computerInput = computerOptions[Math.floor(Math.random() * computerOptions.length)];
 //console.log("Computer chose: " + computerInput);
 
@@ -14,11 +14,11 @@ var computerChose = document.getElementById('computer-chose');
 computerChose.textContent = "Computer chose: " + computerInput;
 
 var gameResult = document.getElementById('result');
-gameResult.textContent = gameRound;
+// gameResult.textContent = gameRound;
 
 function playRound() {
   if (userChose == "ROCK" && computerInput == "PAPER") {
-    document.write("Computer Wins!");
+    console.log("Computer Wins");
   } else if (userInput == "ROCK" && computerInput == "SCISSORS") {
     document.write("User Wins!");
   } else if (userInput == "ROCK" && computerInput == "ROCK") {
@@ -26,4 +26,5 @@ function playRound() {
   }
 
 }
-var gameRound = playRound();
+
+// var gameRound = playRound();
