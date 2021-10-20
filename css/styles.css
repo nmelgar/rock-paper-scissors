@@ -76,6 +76,10 @@ body {
   border: 2px solid red;
 }
 
+#final-result {
+  font-weight: bolder;
+  color: red;
+}
 /*--------->General Styles<-----------*/
 
 
