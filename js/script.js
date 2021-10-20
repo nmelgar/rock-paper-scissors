@@ -7,6 +7,7 @@ playerNumbers.textContent = playerCounter;
 let computerNumbers = document.getElementById('computer-counter');
 computerNumbers.textContent = computerCounter;
 
+
 //buttons of user's decisions
 var userChoseRock = document.getElementById('rock-button').addEventListener("click", computerDecision);
 var userChoseRock = document.getElementById('rock-button').addEventListener("click", functionRock);
@@ -98,7 +99,7 @@ function restartGame() {
   playerNumbers.textContent = playerCounter = 0;
   //this line will delete the final result of the winner
   finalResultText.textContent = " ";
-
+  roundResult.textContent = " ";
 }
 
 let finalResultText;
