@@ -27,10 +27,7 @@ function computerDecision() {
   //next lines will print what the computer chose
   let computerChose = document.getElementById('computer-chose');
   computerChose.textContent = "Computer chose: " + computerInput;
-
 }
-
-
 
 //this holds the result of each round
 let roundResult = document.getElementById('result');
@@ -45,15 +42,12 @@ function functionRock() {
   } else {
     roundResult.textContent = "No winner";
   }
-
   //counter
   if (roundResult.textContent == "User Wins") {
-    playerNumbers.textContent = playerCounter += 1;
+    playerNumbers.textContent = "Player: " + (playerCounter += 1);
   } else if (roundResult.textContent == "Computer Wins") {
-    computerNumbers.textContent = computerCounter += 1;
+    computerNumbers.textContent = "Computer: " + (computerCounter += 1);
   }
-
-
 }
 
 function functionPaper() {
@@ -66,19 +60,17 @@ function functionPaper() {
   } else {
     roundResult.textContent = "No winner";
   }
-
   //counter
   if (roundResult.textContent == "User Wins") {
-    playerNumbers.textContent = playerCounter += 1;
+    playerNumbers.textContent = "Player: " + (playerCounter += 1);
   } else if (roundResult.textContent == "Computer Wins") {
-    computerNumbers.textContent = computerCounter += 1;
+    computerNumbers.textContent = "Computer: " + (computerCounter += 1);
   }
 }
 
 function functionScissors() {
   if (userChoseScissors = 'scissors-button' && computerInput == "ROCK") {
     roundResult.textContent = "Computer Wins";
-    console.log(computerCounter++);
 
   } else if (userChoseScissors = 'scissors-button' && computerInput == "PAPER") {
     roundResult.textContent = "User Wins";
@@ -86,12 +78,18 @@ function functionScissors() {
   } else {
     roundResult.textContent = "No winner";
   }
-
   //counter
   if (roundResult.textContent == "User Wins") {
-    playerNumbers.textContent = playerCounter += 1;
+    playerNumbers.textContent = "Player: " + (playerCounter += 1);
   } else if (roundResult.textContent == "Computer Wins") {
-    computerNumbers.textContent = computerCounter += 1;
+    computerNumbers.textContent = "Computer: " + (computerCounter += 1);
   }
+}
 
+//function to restart the counter to 0
+var startAgain = document.getElementById('start-again').addEventListener("click", restartGame);
+function restartGame() {
+  computerNumbers.textContent = computerCounter = 0;
+  playerNumbers.textContent = playerCounter = 0;
+  
 }
