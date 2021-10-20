@@ -1,7 +1,12 @@
-
 //counter of the played rounds
 let playerCounter = 0;
 let computerCounter = 0;
+
+let playerNumbers = document.getElementById('player-counter');
+playerNumbers.textContent = playerCounter;
+
+let computerNumbers = document.getElementById('computer-counter');
+computerNumbers.textContent = computerCounter;
 
 
 var userChoseRock = document.getElementById('rock-button').addEventListener("click", computerDecision);
@@ -25,8 +30,12 @@ function computerDecision() {
 
 }
 
+
+
+//this holds the result of each round
+let roundResult = document.getElementById('result');
+
 function functionRock() {
-  let roundResult = document.getElementById('result');
   if (userChoseRock = 'rock-button' && computerInput == "PAPER") {
     roundResult.textContent = "Computer Wins";
 
@@ -36,10 +45,18 @@ function functionRock() {
   } else {
     roundResult.textContent = "No winner";
   }
+
+  //counter
+  if (roundResult.textContent == "User Wins") {
+    playerNumbers.textContent = playerCounter += 1;
+  } else if (roundResult.textContent == "Computer Wins") {
+    computerNumbers.textContent = computerCounter += 1;
+  }
+
+
 }
 
 function functionPaper() {
-  let roundResult = document.getElementById('result');
   if (userChosePaper = 'paper-button' && computerInput == "SCISSORS") {
     roundResult.textContent = "Computer Wins";
 
@@ -49,12 +66,19 @@ function functionPaper() {
   } else {
     roundResult.textContent = "No winner";
   }
+
+  //counter
+  if (roundResult.textContent == "User Wins") {
+    playerNumbers.textContent = playerCounter += 1;
+  } else if (roundResult.textContent == "Computer Wins") {
+    computerNumbers.textContent = computerCounter += 1;
+  }
 }
 
 function functionScissors() {
-  let roundResult = document.getElementById('result');
   if (userChoseScissors = 'scissors-button' && computerInput == "ROCK") {
     roundResult.textContent = "Computer Wins";
+    console.log(computerCounter++);
 
   } else if (userChoseScissors = 'scissors-button' && computerInput == "PAPER") {
     roundResult.textContent = "User Wins";
@@ -62,12 +86,12 @@ function functionScissors() {
   } else {
     roundResult.textContent = "No winner";
   }
+
+  //counter
+  if (roundResult.textContent == "User Wins") {
+    playerNumbers.textContent = playerCounter += 1;
+  } else if (roundResult.textContent == "Computer Wins") {
+    computerNumbers.textContent = computerCounter += 1;
+  }
+
 }
-
-
-let playerNumbers = document.getElementById('player-counter');
-playerNumbers.textContent = playerCounter;
-
-
-let computerNumbers = document.getElementById('computer-counter');
-computerNumbers.textContent = computerCounter;
